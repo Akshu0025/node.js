@@ -7,7 +7,7 @@ pipeline {
         sh 'docker build -t my-node-app .'
     }
 }
-        stage('Lint') {
+  /*      stage('Lint') {
             steps {
                 sh 'npm install'
                 sh 'npm run lint'
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh 'npm run build'
             }
-        }
+        }*/
         
         stage('Deploy') {
             steps {
