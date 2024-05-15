@@ -4,9 +4,7 @@ pipeline {
     stages {
         stage('Build Docker Image') {
     steps {
-        script {
-            docker.build("my-image-name:latest")
-        }
+        sh 'docker build -t my-node-app .'
     }
 }
         stage('Lint') {
